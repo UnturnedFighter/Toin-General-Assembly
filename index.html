@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>General Assembly of the Democratic States of Toin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #002b36;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Merriweather', serif;
+      margin-bottom: 0.5rem;
+    }
+    nav {
+      background-color: #003847;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0.5rem 1rem;
+    }
+    .section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+      background: white;
+      margin-top: 1rem;
+    }
+    .highlight {
+      background-color: #e1ecf4;
+      padding: 1rem;
+      border-left: 4px solid #0077a1;
+      margin-bottom: 2rem;
+    }
+    .tiles {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .tile {
+      flex: 1 1 calc(25% - 1rem);
+      background-color: #f1f1f1;
+      padding: 1rem;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+    footer {
+      background-color: #002b36;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    .footer-columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 1rem;
+    }
+    .footer-columns div {
+      flex: 1 1 200px;
+      margin: 0.5rem;
+    }
+    .civic-visit {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .civic-visit > div {
+      flex: 1;
+    }
+    .session-banner {
+      background-color: #00302c;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 12px;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+    .session-banner span {
+      font-style: italic;
+      color: #ffd700;
+    }
+    .session-banner button {
+      background: none;
+      border: 2px solid white;
+      padding: 0.5rem 1rem;
+      color: white;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .bill-search {
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 1rem;
+    }
+    .bill-search h3 {
+      margin-top: 0;
+    }
+    .bill-search form {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .bill-search input, .bill-search select {
+      padding: 0.5rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .bill-search button {
+      background-color: #ffd700;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to the General Assembly of the Democratic States of Toin</h1>
+    <p>The nation's lawmaking body, where elected Delegates and Senators debate the laws that shape our republic.</p>
+  </header>
+
+  <nav>
+    <a href="#bills">Bills & Laws</a>
+    <a href="#calendar">Session Info</a>
+    <a href="#committees">Committees</a>
+    <a href="#members">Members</a>
+    <a href="#education">Civic Education</a>
+    <a href="#visit">Visit</a>
+  </nav>
+
+  <div class="section">
+    <div class="session-banner">
+      <div>
+        Today, April 21, is day 99 of the 2025 regular session<br />
+        <span>There are 6 day(s) left this session</span>
+      </div>
+      <button>Important legislative session dates 🗓</button>
+    </div>
+
+    <div class="bill-search">
+      <h3>Find a bill or initiative</h3>
+      <form>
+        <label>Biennium
+          <select>
+            <option>2025–26</option>
+          </select>
+        </label>
+        <label>
+          <input type="radio" name="searchType" checked /> Bill
+        </label>
+        <label>
+          <input type="radio" name="searchType" /> Initiative
+        </label>
+        <input type="text" placeholder="Enter bill number" />
+        <button type="submit">Search →</button>
+      </form>
+      <p>Looking for something else? View <a href="#">more ways to find bills</a>.</p>
+    </div>
+  </div>
+
+  <div class="section" id="structure">
+    <h2>How We're Structured</h2>
+    <div class="tiles">
+      <div class="tile"><strong>House of Delegates</strong><br/>View members, leadership, and sessions</div>
+      <div class="tile"><strong>Senate</strong><br/>Senators, chambers, and calendar</div>
+      <div class="tile"><strong>Committees</strong><br/>Standing and joint committees</div>
+      <div class="tile"><strong>Legislative Services</strong><br/>Support staff, researchers, clerks</div>
+    </div>
+  </div>
+
+  <div class="section" id="education">
+    <h2>Civic Education</h2>
+    <div class="civic-visit">
+      <div>
+        <p>Programs and resources for schools, educators, and the public. Learn how laws are made and how to get involved.</p>
+        <button>Explore Education Programs</button>
+      </div>
+      <div>
+        <h3>Plan a Visit to the Capitol</h3>
+        <p>Visit Whitelaw’s Capitol Campus. Find directions, maps, and parking info.</p>
+        <button>Capitol Tour Info</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 General Assembly of the Democratic States of Toin. All rights reserved.</p>
+    <div class="footer-columns">
+      <div>
+        <strong>Contact</strong>
+        <p>Legislative Office<br/>123 Assembly Square, Whitelaw FD 9892<br/>(800) 555-TOIN</p>
+      </div>
+      <div>
+        <strong>Resources</strong>
+        <p><a href="#" style="color:white;">Accessibility</a><br/><a href="#" style="color:white;">Public Records</a><br/><a href="#" style="color:white;">Jobs</a></p>
+      </div>
+      <div>
+        <strong>Social</strong>
+        <p>Follow us on Toinet, StreamCircle, and CivicCast.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
