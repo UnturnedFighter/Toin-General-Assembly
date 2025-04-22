@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bills & Laws | General Assembly of Toin</title>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <title>Laws & Rules | General Assembly of Toin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Open Sans', sans-serif;
       margin: 0;
+      font-family: 'Open Sans', sans-serif;
       background: #f4f4f4;
-      color: #333;
     }
     .topbar {
       background-color: #003847;
@@ -47,14 +46,10 @@
       cursor: pointer;
     }
     header {
-      background-color: #002b36;
+      background: #002b36;
       color: white;
       padding: 2rem;
       text-align: center;
-    }
-    header h1 {
-      font-family: 'Merriweather', serif;
-      margin: 0;
     }
     .section {
       padding: 2rem;
@@ -62,41 +57,64 @@
       margin: auto;
       background: white;
     }
-    .law-block {
-      border-top: 1px solid #ccc;
+    .law-entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
       padding: 1.5rem 0;
+      border-top: 1px solid #ddd;
+      gap: 2rem;
     }
-    .law-block:first-of-type {
+    .law-entry:first-child {
       border-top: none;
     }
-    .law-block h3 {
-      margin-top: 0;
+    .law-entry .description {
+      flex: 2;
     }
-    .law-block p {
-      margin: 0.5rem 0 1rem;
+    .law-entry .actions {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
     }
-    .law-block button, .law-block input {
-      margin-top: 0.5rem;
+    .law-entry h3 {
+      margin: 0 0 0.5rem 0;
     }
-    .law-block input {
-      padding: 0.5rem;
+    .law-entry p {
+      margin: 0;
+    }
+    .law-entry input {
+      padding: 0.4rem;
       border-radius: 4px;
       border: 1px solid #ccc;
     }
-    .law-block button {
+    .law-entry button {
       background-color: #ffd700;
       border: none;
-      padding: 0.5rem 1rem;
+      padding: 0.4rem 1rem;
       border-radius: 6px;
       cursor: pointer;
       font-weight: bold;
     }
+    .constitution-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      background: #e7f1f5;
+      max-width: 1000px;
+      margin: 3rem auto 0 auto;
+    }
+    .constitution-section img {
+      width: 250px;
+      border-radius: 8px;
+    }
     footer {
       background-color: #002b36;
       color: white;
-      text-align: center;
       padding: 2rem;
-      margin-top: 3rem;
+      text-align: center;
+      margin-top: 2rem;
     }
   </style>
 </head>
@@ -107,6 +125,7 @@
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="bills.html">Bills & Laws</a>
+        <a href="laws.html">Laws & Rules</a>
         <a href="committees.html">Committees</a>
         <a href="members.html">Members</a>
         <a href="education.html">Education</a>
@@ -125,49 +144,68 @@
   </div>
 
   <header>
-    <h1>Bills and Laws</h1>
-    <p>Explore enacted legislation, session laws, regulatory codes, and more.</p>
+    <h1>Laws and Rules</h1>
+    <p>Browse national statutes, administrative rules, and foundational legal documents.</p>
   </header>
 
   <div class="section">
-    <div class="law-block">
-      <h3>Federal Statutory Code (FSC)</h3>
-      <p>The official codified law of the Democratic States of Toin, compiling all currently active federal statutes.</p>
-      <input type="text" placeholder="Enter citation or keyword">
-      <button>Search FSC →</button>
+    <div class="law-entry">
+      <div class="description">
+        <h3>Federal Statutory Code (FSC)</h3>
+        <p>The official compilation of all general and permanent national laws currently in force.</p>
+      </div>
+      <div class="actions">
+        <input type="text" placeholder="Search FSC...">
+        <button>Search FSC →</button>
+      </div>
     </div>
-
-    <div class="law-block">
-      <h3>Session Laws</h3>
-      <p>Chronological collection of laws enacted by the General Assembly each session year.</p>
-      <button>Browse Session Laws</button>
+    <div class="law-entry">
+      <div class="description">
+        <h3>Session Laws</h3>
+        <p>A chronological collection of laws passed by the General Assembly during each legislative session.</p>
+      </div>
+      <div class="actions">
+        <button>Browse Session Laws</button>
+      </div>
     </div>
-
-    <div class="law-block">
-      <h3>Administrative Rules (TAC)</h3>
-      <p>Agency-issued regulations and rules that carry the force of law under enabling legislation.</p>
-      <input type="text" placeholder="Enter TAC number or keyword">
-      <button>Search TAC →</button>
+    <div class="law-entry">
+      <div class="description">
+        <h3>Administrative Code (TAC)</h3>
+        <p>All rules and regulations issued by federal agencies, codified and maintained in the Toin Administrative Code.</p>
+      </div>
+      <div class="actions">
+        <input type="text" placeholder="Search TAC...">
+        <button>Search TAC →</button>
+      </div>
     </div>
-
-    <div class="law-block">
-      <h3>Toin Register</h3>
-      <p>Weekly publication containing proposed rules, emergency rules, and notices of hearings.</p>
-      <input type="text" placeholder="Enter register citation (e.g. 95-01-003)">
-      <button>Search Register →</button>
+    <div class="law-entry">
+      <div class="description">
+        <h3>Toin Register</h3>
+        <p>The official record of proposed and emergency rules, public hearings, and notices from agencies.</p>
+      </div>
+      <div class="actions">
+        <input type="text" placeholder="Search Register...">
+        <button>Search Register →</button>
+      </div>
     </div>
-
-    <div class="law-block">
-      <h3>Rule Drafting Service (RDS)</h3>
-      <p>Provides support to agencies drafting new, amended, or repealed rules with legal assistance and formatting help.</p>
-      <button>Learn About RDS</button>
+    <div class="law-entry">
+      <div class="description">
+        <h3>Rule Drafting Service (RDS)</h3>
+        <p>Helps agencies draft and format new rules and amendments, ensuring compliance and clarity.</p>
+      </div>
+      <div class="actions">
+        <button>Learn About RDS</button>
+      </div>
     </div>
+  </div>
 
-    <div class="law-block">
+  <div class="constitution-section">
+    <div>
       <h3>Toin Constitution</h3>
-      <p>The founding legal document of the Democratic States of Toin, outlining the structure of government and citizen rights.</p>
-      <a href="constitution.html">Read the Constitution</a>
+      <p>The foundation of the nation’s legal and political structure. Read the full text or download a copy.</p>
+      <button onclick="window.location.href='constitution.html'">Read the Constitution</button>
     </div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Washington_State_Constitution%2C_1889.jpg/800px-Washington_State_Constitution%2C_1889.jpg" alt="Toin Constitution">
   </div>
 
   <footer>
