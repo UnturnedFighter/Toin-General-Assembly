@@ -134,7 +134,41 @@
       cursor: pointer;
       font-weight: bold;
     }
-  </style>
+      .topbar {
+      background-color: #003847;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 2rem;
+      color: white;
+    }
+    .topbar .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .topbar .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-right: 1.5rem;
+      font-weight: bold;
+    }
+    .topbar select,
+    .topbar input[type="text"] {
+      padding: 0.4rem;
+      border-radius: 4px;
+      border: none;
+    }
+    .topbar button {
+      background-color: #ffd700;
+      border: none;
+      padding: 0.4rem 1rem;
+      margin-left: 0.5rem;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+</style>
 </head>
 <body>
   <header>
@@ -142,14 +176,28 @@
     <p>The nation's lawmaking body, where elected Delegates and Senators debate the laws that shape our republic.</p>
   </header>
 
-  <nav>
-    <a href="bills.html">Bills & Laws</a>
-    <a href="#calendar">Session Info</a>
-    <a href="#committees">Committees</a>
-    <a href="#members">Members</a>
-    <a href="#education">Civic Education</a>
-    <a href="#visit">Visit</a>
-  </nav>
+  <div class="topbar">
+  <div class="nav-left">
+    <strong>GENERAL ASSEMBLY</strong>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="bills.html">Bills & Laws</a>
+      <a href="committees.html">Committees</a>
+      <a href="members.html">Members</a>
+      <a href="education.html">Education</a>
+      <a href="visit.html">Visit</a>
+    </div>
+    <select>
+      <option>English</option>
+      <option>Français</option>
+      <option>Gàidhlig</option>
+    </select>
+  </div>
+  <div class="nav-right">
+    <input type="text" placeholder="Search">
+    <button>Search →</button>
+  </div>
+</div>
 
   <div class="section">
     <div class="session-banner">
